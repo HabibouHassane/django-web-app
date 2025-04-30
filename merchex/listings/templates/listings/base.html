@@ -1,0 +1,12 @@
+<!--listings/templates/listings/base.html-->
+{% load static %}
+<html>
+    <head><title>Merchex</title></head>
+    <link rel="stylesheet" href="{% static 'listings/style.css'%}" />
+    
+    <body>
+        <h1>Hello Django !</h1>
+        {% block content %}{% endblock %}
+
+    </body>
+</html>
