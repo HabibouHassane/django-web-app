@@ -1,0 +1,14 @@
+<!--listings/templates/listings/hello.html-->
+{% extends 'listings/base.html' %}
+
+{% block content %}
+        
+        <ul>
+            {% for listing in listings %}
+            <li><a href="{% url 'listing-detail' listing.id %}">{{ listing.title}}</a></li>
+            {% endfor %}
+        </ul>
+        <!-- TODO : liste des groupes -->
+
+{% endblock %}
+    
