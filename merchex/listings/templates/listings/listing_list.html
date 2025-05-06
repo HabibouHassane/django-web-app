@@ -2,12 +2,19 @@
 {% extends 'listings/base.html' %}
 
 {% block content %}
-        
+        <h1>Listing : </h1>
         <ul>
             {% for listing in listings %}
-            <li><a href="{% url 'listing-detail' listing.id %}">{{ listing.title}}</a></li>
+            <li>
+                <a href="{% url 'listing-detail' listing.id %}">{{ listing.title}}</a>
+                - - <a href="{% url 'listing-update' listing.id %}">[Modifier]</a>
+                - <a href="{% url 'listing-delete' listing.id %}">[Supprimer]</a>
+
+            </li>
             {% endfor %}
         </ul>
+        <a href="{% url 'listing-create' %}">Créer un lisitng</a>
+
         <!-- TODO : liste des groupes -->
 
 {% endblock %}

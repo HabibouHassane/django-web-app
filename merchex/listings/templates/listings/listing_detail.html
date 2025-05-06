@@ -5,10 +5,12 @@
 <ul>
     <li>Type : {{ listing.get_type_display }}</li>
     <li>description : {{ listing.description }}</li>
-    <li>Year : {{ listing.year|yesno }}</li>
+    <li>Sold : {{ listing.sold|yesno }}</li>
+    <li>Year : {{ listing.year }}</li>
     <li>Band : {{ listing.band }}</li>
     
 </ul>
-
+<a href="{% url 'listing-update' listing.id %}">Modifier ce listing</a>
+<a href="{% url 'listing-delete' listing.id %}">Supprimer ce listing</a>
 <a href="{% url 'listing-list' %}">Retour à tous les Listing</a>
 {% endblock %}
