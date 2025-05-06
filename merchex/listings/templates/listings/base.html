@@ -5,7 +5,16 @@
     <link rel="stylesheet" href="{% static 'listings/style.css'%}" />
     
     <body>
-        <h1>Hello Django !</h1>
+        <nav>
+            <ol>
+                <li><a href="{% url 'band-list' %}">Groupes</a></li>
+                <li><a href="{% url 'listing-list' %}">Listing</a></li>
+                <li><a href="{% url 'A propos' %}">A propos</a></li>
+                <li><a href="{% url 'contact' %}">Contactez nous</a></li>
+            </ol>
+            
+            
+        </nav>
         {% block content %}{% endblock %}
 
     </body>

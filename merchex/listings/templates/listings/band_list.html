@@ -3,10 +3,9 @@
 
 {% block content %}
         
-        <p>Mes groupes préférés sont :</p>
         <ul>
             {% for band in bands %}
-            <li>{{ band.name|upper }}</li>
+            <li><a href="{% url 'band-detail' band.id %}">{{ band.name}}</a></li>
             {% endfor %}
         </ul>
         <!-- TODO : liste des groupes -->
